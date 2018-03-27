@@ -1,34 +1,10 @@
-## rosdocked
+Original Repository : [jbohren/rosdocked](https://github.com/jbohren/rosdocked)
 
-Run ROS Indigo / Ubuntu Trusty within Docker on Ubuntu Xenial or on any platform with a shared
-username, home directory, and X11.
+The original repository [jbohren/rosdocked](https://github.com/jbohren/rosdocked) allows the user to run ROS Indigo in more recent Ubuntus using docker.
 
-This enables you to build and run a persistent ROS Indigo workspace as long as
-you can run Docker images.
+This repository differs from the original only in a few debians packages included that were needed for the work i was doing.
 
-Note that any changes made outside of your home directory from within the Docker environment will not persist. If you want to add additional binary packages without having to reinstall them each time, add them to the Dockerfile and rebuild.
+The aditional packages are:
 
-For more info on Docker see here: https://docs.docker.com/engine/installation/linux/ubuntulinux/
-
-### Build
-
-This will create the image with your user/group ID and home directory.
-
-```
-./build.sh IMAGE_NAME
-```
-
-### Run
-
-This will run the docker image.
-
-```
-./dock.sh IMAGE_NAME
-```
-
-The image shares it's  network interface with the host, so you can run this in
-multiple terminals for multiple hooks into the docker environment.
-
-### Whale
-
-🐳
+- ros-indigo-navigation;
+- ros-indigo-libg2o;
